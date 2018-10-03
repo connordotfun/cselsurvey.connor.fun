@@ -1,5 +1,6 @@
 import Browser
 import Html exposing (Html, button, div, text)
+import Html.Attributes exposing (style, id)
 import Html.Events exposing (onClick)
 
 
@@ -14,21 +15,18 @@ main =
 
 type alias Model = String
 
-init : (Model, Cmd Msg)
-init =
-  ("", Cmd.none)
+init : () -> (Model, Cmd Msg)
+init _=
+  (" ", Cmd.none)
 
 
-type Msg = Increment | Decrement
+type Msg = NewSentance
 
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
   case msg of
-    Increment ->
-      (model ++ "", Cmd.none)
-
-    Decrement ->
-      (model ++ "", Cmd.none)
+    NewSentance -> 
+      ("This is an example sentance", Cmd.none)
 
 
 subscriptions : Model -> Sub Msg
@@ -37,8 +35,11 @@ subscriptions model =
 
 view : Model -> Html Msg
 view model =
-  div []
-    [ button [ onClick Decrement ] [ text "-" ]
-    , div [] [ text model ]
-    , button [ onClick Increment ] [ text "+" ]
+  div [id "container"]
+    [ div [id "content"] 
+      [
+        div [id "header"] [ text "What do students think about CSEL?" ]
+        , text model
+      ]
+    , button [id "button", onClick NewSentance ] [ text "Find Out!" ]
     ]

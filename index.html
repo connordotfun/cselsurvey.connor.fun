@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>Foo</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+	<body>
+		<div id="elm"></div>
+		<script src="elm.js"></script>
+		<script>
+			console.log(Object.keys(Elm.Main));
+			Elm.Main.init({node: document.getElementById("elm")});
+			console.log("fuck")
+		</script>
+	</body>
+</html>
