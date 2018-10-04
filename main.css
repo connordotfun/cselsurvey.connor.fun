@@ -19,12 +19,12 @@ body {
     /* width: 65%; */
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen {
     #container {
         margin-top: 5vh;
         width: 95%;
         height: 85vh;
-        font-size: 20px;
+        font-size: 25px;
     }
 
     #content {
@@ -32,7 +32,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 599px) {
+/* @media only screen and (min-width: 1023px) {
     #container {
         height: 8em;
         font-size: 34px;
@@ -43,7 +43,7 @@ body {
     #content {
         height: 5em;
     }
-}
+} */
 #header {
     font-style: normal;
     font-size: 40px;
