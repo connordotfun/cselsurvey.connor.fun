@@ -5776,13 +5776,19 @@ var author$project$Main$getNewSentences = A2(
 var author$project$Main$getNextSentence = function (model) {
 	if (model.b) {
 		if (!model.b.b) {
-			return _Utils_Tuple2(model, author$project$Main$getNewSentences);
+			return _Utils_Tuple2(
+				_List_fromArray(
+					['...']),
+				author$project$Main$getNewSentences);
 		} else {
 			var tail = model.b;
 			return _Utils_Tuple2(tail, elm$core$Platform$Cmd$none);
 		}
 	} else {
-		return _Utils_Tuple2(model, author$project$Main$getNewSentences);
+		return _Utils_Tuple2(
+			_List_fromArray(
+				['...']),
+			author$project$Main$getNewSentences);
 	}
 };
 var author$project$Main$handleModelUpdate = function (result) {

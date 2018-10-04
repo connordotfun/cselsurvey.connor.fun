@@ -56,9 +56,9 @@ update msg model =
 getNextSentence : Model -> (Model, Cmd Msg)
 getNextSentence model =
   case model of
-    _::[] -> (model, getNewSentences)
+    _::[] -> (["..."], getNewSentences)
     _::tail -> (tail, Cmd.none)
-    [] -> (model, getNewSentences)
+    [] -> (["..."], getNewSentences)
     
 
 
