@@ -117,3 +117,17 @@ body {
     
     transition: width .25s ease-out, padding-top .2s ease-out;
 }
+#productinfo {
+    float: left;
+    position: absolute;
+    bottom: 3%;
+    font-family: monospace;
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+#productinfo img {
+   height: 40px;
+   vertical-align: middle;
+   display: inline-block;
+}
